@@ -1,0 +1,85 @@
+<link rel="stylesheet" href="//static.wdjimg.com/ajax/libs/twitter-bootstrap/3.2.0/css/bootstrap.min.css
+
+" />
+
+<div class="jumbotron">
+    <div class="container">
+        <h1>Charon</h1>
+        <p>A proxy service for HTTP request. </p>
+        <button class="btn btn-primary" data-toggle="modal" data-target="#add-rule">Add a new rule...</button>
+    </div>
+</div>
+<div class="container">
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>From</th>
+                <th>To</th>
+                <th>Transform</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody class="list-table-body"></tbody>
+    </table>
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="add-rule" tabindex="-1" role="dialog">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                <h4 class="modal-title" id="myModalLabel">Add a new proxy rule</h4>
+            </div>
+            <div class="modal-body">
+                <form id="data" class="form-horizontal" role="form">
+                    <!-- <fieldset>
+                        <legend>From: </legend>
+                        <div class="form-group">
+                            <label for="from-method" class="col-sm-2 control-label">Method: </label>
+                            <div class="col-sm-10">
+                                <select class="form-control" name="from-method" id="from-method">
+                                    <option value="GET">GET</option>
+                                    <option value="POST">POST</option>
+                                    <option value="DELETE">DELETE</option>
+                                    <option value="PUT">PUT</option>
+                                    <option value="OPTIONS">OPTIONS</option>
+                                </select>
+                            </div>
+                        </div>
+                    </fieldset> -->
+                    <fieldset>
+                        <legend>To: </legend>
+                        <div class="form-group">
+                            <label for="to-method" class="col-sm-2 control-label">Method: </label>
+                            <div class="col-sm-10">
+                                <select class="form-control" id="to-method" name="to-method">
+                                    <option value="GET">GET</option>
+                                    <option value="POST">POST</option>
+                                    <option value="DELETE">DELETE</option>
+                                    <option value="PUT">PUT</option>
+                                    <option value="OPTIONS">OPTIONS</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="to-url" class="col-sm-2 control-label">URL: </label>
+                            <div class="col-sm-10">
+                                <input type="url" class="form-control" id="to-url" name="to-url" placeholder="To this URL">
+                            </div>
+                        </div>
+                    </fieldset>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+                <button type="button" class="btn btn-primary js-btn-add" data-dismiss="modal">Add</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="//static.wdjimg.com/ajax/libs/underscore.js/1.6.0/underscore-min.js"></script>
+<script src="//static.wdjimg.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<script src="//static.wdjimg.com/ajax/libs/twitter-bootstrap/3.2.0/js/bootstrap.min.js"></script>
+<script src="/js/main.js"></script>
